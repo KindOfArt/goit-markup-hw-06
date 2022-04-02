@@ -865,6 +865,7 @@ p {
   transform: translate(-50%, -50%) scale(1);
   width: 528px;
   height: 581px;
+  padding: 40px;
 
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -896,4 +897,107 @@ p {
 
 .btn-modal-close:hover {
   fill: var(--accent-color);
+}
+
+.modal-field {
+  display: flex;
+  flex-direction: column;
+  width: 448px;
+  padding: 0;
+
+  border: none;
+}
+
+.lield-title {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  color: var(--main-text-color);
+}
+
+.modal-thumb {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-thumb:not(:last-child) {
+  position: relative;
+
+  margin-bottom: 10px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 4px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01;
+
+  pointer-events: none;
+
+  color: var(--second-text-color);
+}
+
+.input {
+  display: block;
+  height: 40px;
+  padding-left: 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border 250ms var(--transform-timing);
+}
+
+.input:hover,
+.input:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.input:hover + .icon,
+.input:focus + .icon {
+  fill: var(--accent-color);
+}
+
+.input-comments {
+  display: block;
+  height: 120px;
+  padding: 12px 16px;
+
+  resize: none;
+}
+
+.icon {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 50%;
+  transform: translateX(15px);
+
+  pointer-events: none;
+
+  transition: fill 250ms var(--transform-timing);
+}
+
+.modal-checkbox {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.link-ckeckbox {
+  color: var(--accent-color);
+}
+
+.label-checkbox {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 1.71;
+
+  color: var(--second-text-color);
 }
