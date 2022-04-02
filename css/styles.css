@@ -629,6 +629,7 @@ p {
 
 .subscribe-field {
   position: relative;
+  display: inline-flex;
 }
 
 .subscribe-input {
@@ -636,7 +637,6 @@ p {
   width: 358px;
   height: 50px;
   padding-left: 16px;
-
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
 
@@ -986,18 +986,81 @@ p {
 }
 
 .modal-checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.link-ckeckbox {
+.checkbox-input {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-label-box {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-label {
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: var(--second-text-color);
+}
+
+.checkbox-icon {
+  margin-right: 7px;
+  border: 2px solid black;
+  border-radius: 2px;
+  fill: var(--basic-white);
+
+  transition: background-color 250ms var(--transform-timing), fill 250ms var(--transform-timing),
+    border-color 250ms var(--transform-timing);
+}
+
+.checkbox-input:checked + .checkbox-label-box > .checkbox-icon {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  fill: var(--basic-white);
+}
+
+.checkbox-license {
   color: var(--accent-color);
 }
 
-.label-checkbox {
-  font-weight: 400;
-  font-size: 14px;
-  letter-spacing: 1.71;
+.modal-btn-box {
+  margin-top: 30px;
+  display: inline-flex;
+  justify-content: center;
+}
 
-  color: var(--second-text-color);
+.field-btn {
+  display: block;
+  padding: 10px 55px;
+
+  border: none;
+
+  font-weight: 700;
+  font-size: 16;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+
+  background-color: var(--accent-color);
+  color: var(--basic-white);
+
+  transition: box-shadow 250ms var(--transform-timing);
+}
+
+.field-btn:hover,
+.field-btn:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
