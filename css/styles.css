@@ -915,7 +915,7 @@ input {
   fill: var(--accent-color);
 }
 
-.field {
+.modal-field {
   width: 448px;
 }
 
@@ -1029,8 +1029,12 @@ input {
   overflow: hidden;
 }
 
+.checkbox-input:focus + .checkbox-icon {
+  outline: 1px solid var(--basic-black);
+}
+
 .checkbox-input:checked + .checkbox-icon {
-  border: none;
+  border-color: var(--accent-color);
   background-color: var(--accent-color);
   fill: var(--basic-white);
 }
@@ -1041,13 +1045,14 @@ input {
   top: 50%;
   transform: translateY(-50%);
   margin-right: 7px;
-  border: 2px solid var(--basic-black);
+  border: 2px solid #212121;
   border-radius: 2px;
 
   transition: background-color 250ms var(--transform-timing), fill 250ms var(--transform-timing);
 
   fill: var(--basic-white);
 }
+
 .checkbox-text {
   margin-left: 36px;
 
